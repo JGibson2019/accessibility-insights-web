@@ -15,7 +15,7 @@ const createWindow = () => {
     });
 
     mainWindow
-        .loadFile(path.resolve(__dirname, '../electron/views/root-container/rootView.html'))
+        .loadFile(path.resolve(__dirname, '../electron/views/root-container/index.html'))
         .then(() => console.log('url loaded'))
         .catch(console.log);
 
