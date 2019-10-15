@@ -3,6 +3,7 @@
 @import '../../../../common/styles/fonts.scss';
 
 .device-connect-body {
+    -webkit-app-region: no-drag;
     margin: 16px 32px;
 
     h3 {
