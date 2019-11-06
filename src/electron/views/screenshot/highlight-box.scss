@@ -4,7 +4,9 @@
 
 .highlight-box {
     position: absolute;
-    outline: 2.4px solid $negative-outcome;
+    border-style: solid;
+    border-color: $negative-outcome;
+    border-width: 2.4px 2.4px 2.8px 2.4px;
 
     .highlight-box-label {
         position: absolute;
