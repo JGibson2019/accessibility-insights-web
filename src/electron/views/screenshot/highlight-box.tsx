@@ -17,10 +17,10 @@ export const HighlightBox = NamedFC<HighlightBoxProps>('HighlightBox', props => 
     const height = boundingRectangle.bottom - boundingRectangle.top;
 
     const boxStyles: CSSProperties = {
-        width: `${width}px`,
-        height: `${height}px`,
-        top: `${boundingRectangle.top}px`,
-        left: `${boundingRectangle.left}px`,
+        width: `${1.1 * width}px`,
+        height: `${1.1 * height}px`,
+        top: `${0.98 * boundingRectangle.top}px`,
+        left: `${0.9 * boundingRectangle.left}px`,
     };
 
     return (
