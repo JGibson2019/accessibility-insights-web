@@ -47,18 +47,13 @@ const settingsForm = NamedFC<SettingsFormProps<GitHubIssueFilingSettings>>(
         };
         const descriptionId = 'github-description';
         return (
-            <>
-                <TextField
-                    className="issue-setting"
-                    label="Enter your GitHub issues URL"
-                    onChange={onGitHubRepositoryChange}
-                    value={isEmpty(props.settings) ? '' : props.settings.repository}
-                    aria-describedby={descriptionId}
-                />
-                <span id={descriptionId} className="textfield-description">
-                    example: https://github.com/owner/repo/issues
-                </span>
-            </>
+            <TextField
+                className="issue-setting"
+                label="Enter your GitHub issues URL"
+                onChange={onGitHubRepositoryChange}
+                value={isEmpty(props.settings) ? '' : props.settings.repository}
+                placeholder="https://github.com/owner/repo/issues"
+            />
         );
     },
 );
