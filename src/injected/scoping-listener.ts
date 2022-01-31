@@ -34,15 +34,15 @@ export class ScopingListener {
         this.addContainer(shadowContainer);
         this.onInspectClick = onInspectClick;
         this.onInspectHover = onInspectHover;
-        this.dom.addEventListener('click', this.onClick);
-        this.dom.addEventListener('mousemove', this.onHover);
+        this.dom.addEventListener('click', this.onClick, { capture: true });
+        this.dom.addEventListener('mousemove', this.onHover, { capture: true });
     }
 
     public stop(): void {
         const shadowContainer = this.shadowUtils.getShadowContainer();
         this.removeContainer(shadowContainer);
-        this.dom.removeEventListener('click', this.onClick);
-        this.dom.removeEventListener('mousemove', this.onHover);
+        this.dom.removeEventListener('click', this.onClick, { capture: true });
+        this.dom.removeEventListener('mousemove', this.onHover, { capture: true });
     }
 
     private removeContainer(shadowContainer: HTMLElement): void {

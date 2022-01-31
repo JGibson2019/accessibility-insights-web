@@ -144,11 +144,15 @@ export class DiagnosticViewToggle extends React.Component<
 
     private addUserEventListener = (): void => {
         if (!this.userEventListenerAdded) {
-            this.dom.addEventListener('keydown', (event: any) => {
-                if (event.keyCode === KeyCodeConstants.TAB) {
-                    this.onBlurHandler();
-                }
-            });
+            this.dom.addEventListener(
+                'keydown',
+                (event: any) => {
+                    if (event.keyCode === KeyCodeConstants.TAB) {
+                        this.onBlurHandler();
+                    }
+                },
+                { capture: true },
+            );
 
             const hamburgerButton = this.dom.querySelector('.feedback-collapse-menu-button');
             if (hamburgerButton != null) {

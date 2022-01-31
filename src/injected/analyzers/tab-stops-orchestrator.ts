@@ -35,8 +35,8 @@ export class TabStopRequirementOrchestrator
     };
 
     public start = () => {
-        this.dom.addEventListener('keydown', this.onKeydownForFocusTraps);
-        this.dom.addEventListener('focusin', this.addNewTabStop);
+        this.dom.addEventListener('keydown', this.onKeydownForFocusTraps, { capture: true });
+        this.dom.addEventListener('focusin', this.addNewTabStop, { capture: true });
 
         this.tabbableTabStops = this.tabbableElementGetter.getRawElements();
         const tabbableFocusOrderResults =
@@ -47,8 +47,8 @@ export class TabStopRequirementOrchestrator
     };
 
     public stop = () => {
-        this.dom.removeEventListener('keydown', this.onKeydownForFocusTraps);
-        this.dom.removeEventListener('focusin', this.addNewTabStop);
+        this.dom.removeEventListener('keydown', this.onKeydownForFocusTraps, { capture: true });
+        this.dom.removeEventListener('focusin', this.addNewTabStop, { capture: true });
 
         const keyboardNavigationResults =
             this.tabStopsRequirementEvaluator.getKeyboardNavigationResults(

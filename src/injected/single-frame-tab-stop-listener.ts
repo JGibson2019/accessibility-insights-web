@@ -16,11 +16,11 @@ export class SingleFrameTabStopListener implements AllFrameRunnerTarget<TabStopE
     ) {}
 
     public start = () => {
-        this.dom.addEventListener('focusin', this.onFocusIn);
+        this.dom.addEventListener('focusin', this.onFocusIn, { capture: true });
     };
 
     public stop = () => {
-        this.dom.removeEventListener('focusin', this.onFocusIn);
+        this.dom.removeEventListener('focusin', this.onFocusIn, { capture: true });
     };
 
     public setResultCallback = (reportResultCallback: (payload: TabStopEvent) => Promise<void>) => {
