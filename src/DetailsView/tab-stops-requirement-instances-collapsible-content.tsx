@@ -1,8 +1,5 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
-import { NamedFC } from 'common/react/named-fc';
-import { AssessmentInstanceDetailsColumn } from 'DetailsView/components/assessment-instance-details-column';
-import { TabStopsRequirementResultInstance } from 'DetailsView/tab-stops-requirement-result';
 import {
     CheckboxVisibility,
     ColumnActionsMode,
@@ -12,6 +9,9 @@ import {
     Icon,
     Link,
 } from '@fluentui/react';
+import { NamedFC } from 'common/react/named-fc';
+import { AssessmentInstanceDetailsColumn } from 'DetailsView/components/assessment-instance-details-column';
+import { TabStopsRequirementResultInstance } from 'DetailsView/tab-stops-requirement-result';
 import * as React from 'react';
 import { TabStopRequirementId } from 'types/tab-stop-requirement-info';
 import * as styles from './tab-stops-requirement-instances-collapsible-content.scss';
