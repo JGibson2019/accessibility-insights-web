@@ -13,3 +13,12 @@
     display: inline-block;
     min-width: 0;
 }
+
+.insights-link {
+    &:hover {
+        text-decoration: none;
+    }
+    i {
+        display: inline;
+    }
+}
