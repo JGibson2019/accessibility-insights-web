@@ -160,6 +160,11 @@
         color: var(--link) !important;
         text-decoration: none;
       }
+      @media screen and (forced-colors: active) {
+        .insights-link {
+          forced-color-adjust: unset;
+        }
+      }
       .insights-link:hover {
         color: var(--link-hover) !important;
         text-decoration: underline;
@@ -258,10 +263,7 @@
         flex-grow: 0;
         font-size: 14px;
         line-height: 20px;
-        font-family: "Segoe UI Semibold", "Segoe UI Web (West European)",
-          "Segoe UI", "-apple-system", BlinkMacSystemFont, Roboto,
-          "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 600;
         color: var(--primary-text);
         text-align: left;
       }
@@ -653,10 +655,8 @@
       }
       .report-header-command-bar .target-page {
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
         margin: 0px 0px 0px 16px;
-        display: inherit;
+        display: flex;
         color: var(--primary-text);
         font-family: "Segoe UI Web (West European)", "Segoe UI", "-apple-system",
           BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Ubuntu, Arial,
@@ -664,6 +664,7 @@
         font-size: 14px;
         line-height: 20px;
         font-weight: normal;
+        min-width: 0;
       }
       .report-header-command-bar .target-page a {
         white-space: nowrap;
@@ -692,10 +693,7 @@
         margin-top: 56px;
       }
       .title-section h1 {
-        font-family: "Segoe UI Semibold", "Segoe UI Web (West European)",
-          "Segoe UI", "-apple-system", BlinkMacSystemFont, Roboto,
-          "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 600;
         margin: 0px 0px 24px 0px;
         font-size: 21px;
         line-height: 32px;
@@ -870,10 +868,7 @@
         flex-grow: 0;
         font-size: 14px;
         line-height: 20px;
-        font-family: "Segoe UI Semibold", "Segoe UI Web (West European)",
-          "Segoe UI", "-apple-system", BlinkMacSystemFont, Roboto,
-          "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 600;
         color: var(--primary-text);
         text-align: left;
       }
@@ -1027,6 +1022,11 @@
       .kebab-menu--eviKu button:hover {
         background-color: var(--menu-item-background-hover);
       }
+      @media screen and (forced-colors: active) {
+        .kebab-menu--eviKu button:hover {
+          background-color: inherit;
+        }
+      }
       .kebab-menu--eviKu button:active {
         background-color: var(--menu-item-background-active);
         color: var(--light-black);
@@ -1061,6 +1061,16 @@
       button.kebab-menu-button--dy7Ui:active svg > circle,
       button.kebab-menu-button--dy7Ui[aria-expanded="true"] svg > circle {
         stroke: var(--light-black);
+      }
+      @media screen and (forced-colors: active) {
+        button.kebab-menu-button--dy7Ui:active,
+        button.kebab-menu-button--dy7Ui[aria-expanded="true"] {
+          color: inherit;
+        }
+        button.kebab-menu-button--dy7Ui:active svg > circle,
+        button.kebab-menu-button--dy7Ui[aria-expanded="true"] svg > circle {
+          stroke: inherit;
+        }
       }
       button.kebab-menu-button--dy7Ui > span {
         justify-content: center;
@@ -1124,10 +1134,7 @@
         word-break: break-word;
       }
       .rule-more-resources--Bsblo .more-resources-title--whTFs {
-        font-family: "Segoe UI Semibold", "Segoe UI Web (West European)",
-          "Segoe UI", "-apple-system", BlinkMacSystemFont, Roboto,
-          "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 600;
       }
       .rule-more-resources--Bsblo .rule-details-id--n_S89 {
         padding: 12px 0;
@@ -1144,18 +1151,12 @@
         margin-bottom: 2px;
       }
       .rule-details-group--U69fz .rule-detail .rule-details-id {
-        font-family: "Segoe UI Semibold", "Segoe UI Web (West European)",
-          "Segoe UI", "-apple-system", BlinkMacSystemFont, Roboto,
-          "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 600;
         color: var(--primary-text);
         word-break: break-all;
       }
       .rule-details-group--U69fz .rule-detail .rule-details-id a {
-        font-family: "Segoe UI Semibold", "Segoe UI Web (West European)",
-          "Segoe UI", "-apple-system", BlinkMacSystemFont, Roboto,
-          "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 600;
         color: var(--primary-text) !important;
       }
       .rule-details-group--U69fz .rule-detail .rule-detail-description {
@@ -1186,10 +1187,6 @@
         margin-bottom: 3px;
       }
       .result-section-title--qv3MK .title--neMma {
-        font-family: "Segoe UI Semibold", "Segoe UI Web (West European)",
-          "Segoe UI", "-apple-system", BlinkMacSystemFont, Roboto,
-          "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         font-weight: 600;
         font-size: 17px;
         line-height: 24px;
@@ -1197,10 +1194,6 @@
         color: var(--primary-text);
       }
       .result-section-title--qv3MK .heading--VbGap {
-        font-family: "Segoe UI Semibold", "Segoe UI Web (West European)",
-          "Segoe UI", "-apple-system", BlinkMacSystemFont, Roboto,
-          "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         font-weight: 600;
         font-size: 15px;
         line-height: 20px;
@@ -1266,10 +1259,8 @@
       }
       .report-header-command-bar--wDg1t .target-page--giudb {
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
         margin: 0px 0px 0px 16px;
-        display: inherit;
+        display: flex;
         color: var(--primary-text);
         font-family: "Segoe UI Web (West European)", "Segoe UI", "-apple-system",
           BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Ubuntu, Arial,
@@ -1277,6 +1268,7 @@
         font-size: 14px;
         line-height: 20px;
         font-weight: normal;
+        min-width: 0;
       }
       .report-header-command-bar--wDg1t .target-page--giudb a {
         white-space: nowrap;
@@ -1292,10 +1284,6 @@
         margin-bottom: 8px;
       }
       .combined-report-result-section-title--XUDDo .title--lcuIW {
-        font-family: "Segoe UI Semibold", "Segoe UI Web (West European)",
-          "Segoe UI", "-apple-system", BlinkMacSystemFont, Roboto,
-          "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         font-weight: 600;
         font-size: 17px;
         line-height: 24px;
@@ -1303,10 +1291,6 @@
         color: var(--primary-text);
       }
       .combined-report-result-section-title--XUDDo .heading--uUq3e {
-        font-family: "Segoe UI Semibold", "Segoe UI Web (West European)",
-          "Segoe UI", "-apple-system", BlinkMacSystemFont, Roboto,
-          "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         font-weight: 600;
         font-size: 15px;
         line-height: 20px;
@@ -1341,10 +1325,6 @@
       .rules-results-container--n7EEu .results-heading--pyS7R {
         margin-top: 32px;
         margin-bottom: 32px;
-        font-family: "Segoe UI Semibold", "Segoe UI Web (West European)",
-          "Segoe UI", "-apple-system", BlinkMacSystemFont, Roboto,
-          "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         font-weight: 600;
         font-size: 17px;
         line-height: 24px;
@@ -1652,7 +1632,7 @@
                 ><a
                   target="_blank"
                   href="https://example.com/mock-base-url"
-                  class="ms-Link insights-link root-49"
+                  class="ms-Link insights-link root-109"
                   title="Mock base without failures or unscannables"
                   id="new-tab-link-with-confirmation-dialog__0"
                   >https://example.com/mock-base-url</a
@@ -1890,7 +1870,7 @@
                           ><a
                             target="_blank"
                             href="https://accessibilityinsights.io/info-examples/web/bypass"
-                            class="ms-Link insights-link root-49"
+                            class="ms-Link insights-link root-109"
                             id="new-tab-link-with-confirmation-dialog__1"
                             >More information about bypass</a
                           ><script>
@@ -1920,7 +1900,7 @@
                             ><a
                               target="_blank"
                               href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks"
-                              class="ms-Link insights-link root-49"
+                              class="ms-Link insights-link root-109"
                               id="new-tab-link-with-confirmation-dialog__2"
                               >WCAG 2.4.1</a
                             ><script>
@@ -1968,7 +1948,7 @@
                                             ><a
                                               target="_blank"
                                               href="https://url/rule-1/failure-1"
-                                              class="ms-Link insights-link root-49"
+                                              class="ms-Link insights-link root-109"
                                               id="new-tab-link-with-confirmation-dialog__3"
                                               >https://url/rule-1/failure-1</a
                                             ><script>
@@ -2055,7 +2035,7 @@
                                             ><a
                                               target="_blank"
                                               href="https://url/rule-1/failure-1"
-                                              class="ms-Link insights-link root-49"
+                                              class="ms-Link insights-link root-109"
                                               id="new-tab-link-with-confirmation-dialog__4"
                                               >https://url/rule-1/failure-1</a
                                             ><script>
@@ -2090,7 +2070,7 @@
                                             ><a
                                               target="_blank"
                                               href="https://url/rule1/failure-2"
-                                              class="ms-Link insights-link root-49"
+                                              class="ms-Link insights-link root-109"
                                               aria-label="NEW. https://url/rule1/failure-2"
                                               id="new-tab-link-with-confirmation-dialog__5"
                                               >https://url/rule1/failure-2</a
@@ -2241,7 +2221,7 @@
                           ><a
                             target="_blank"
                             href="https://accessibilityinsights.io/info-examples/web/color-contrast"
-                            class="ms-Link insights-link root-49"
+                            class="ms-Link insights-link root-109"
                             id="new-tab-link-with-confirmation-dialog__6"
                             >More information about color-contrast</a
                           ><script>
@@ -2271,7 +2251,7 @@
                             ><a
                               target="_blank"
                               href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html"
-                              class="ms-Link insights-link root-49"
+                              class="ms-Link insights-link root-109"
                               id="new-tab-link-with-confirmation-dialog__7"
                               >WCAG 1.4.3</a
                             ><script>
@@ -2319,7 +2299,7 @@
                                             ><a
                                               target="_blank"
                                               href="https://url/rule2/failure1"
-                                              class="ms-Link insights-link root-49"
+                                              class="ms-Link insights-link root-109"
                                               aria-label="NEW. https://url/rule2/failure1"
                                               id="new-tab-link-with-confirmation-dialog__8"
                                               >https://url/rule2/failure1</a
@@ -2499,7 +2479,7 @@
                         ><a
                           target="_blank"
                           href="https://dequeuniversity.com/rules/axe/3.3/area-alt?application=webdriverjs"
-                          class="ms-Link insights-link root-49"
+                          class="ms-Link insights-link root-109"
                           aria-label="rule area-alt"
                           aria-describedby="passed-rule-area-alt-description"
                           >area-alt</a
@@ -2514,7 +2494,7 @@
                         ><a
                           target="_blank"
                           href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"
-                          class="ms-Link insights-link root-49"
+                          class="ms-Link insights-link root-109"
                           id="new-tab-link-with-confirmation-dialog__9"
                           >WCAG 1.1.1</a
                         ><script>
@@ -2547,7 +2527,7 @@
                         ><a
                           target="_blank"
                           href="https://accessibilityinsights.io/info-examples/web/aria-hidden-focus"
-                          class="ms-Link insights-link root-49"
+                          class="ms-Link insights-link root-109"
                           aria-label="rule aria-hidden-focus"
                           aria-describedby="passed-rule-aria-hidden-focus-description"
                           >aria-hidden-focus</a
@@ -2562,7 +2542,7 @@
                         ><a
                           target="_blank"
                           href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships"
-                          class="ms-Link insights-link root-49"
+                          class="ms-Link insights-link root-109"
                           id="new-tab-link-with-confirmation-dialog__10"
                           >WCAG 1.3.1</a
                         ><script>
@@ -2590,7 +2570,7 @@
                         ><a
                           target="_blank"
                           href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html"
-                          class="ms-Link insights-link root-49"
+                          class="ms-Link insights-link root-109"
                           id="new-tab-link-with-confirmation-dialog__11"
                           >WCAG 4.1.2</a
                         ><script>
@@ -2647,7 +2627,7 @@
                         ><a
                           target="_blank"
                           href="https://accessibilityinsights.io/info-examples/web/aria-input-field-name"
-                          class="ms-Link insights-link root-49"
+                          class="ms-Link insights-link root-109"
                           aria-label="rule aria-input-field-name"
                           aria-describedby="not-applicable-rule-aria-input-field-name-description"
                           >aria-input-field-name</a
@@ -2662,7 +2642,7 @@
                         ><a
                           target="_blank"
                           href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html"
-                          class="ms-Link insights-link root-49"
+                          class="ms-Link insights-link root-109"
                           id="new-tab-link-with-confirmation-dialog__12"
                           >WCAG 4.1.2</a
                         ><script>
@@ -2695,7 +2675,7 @@
                         ><a
                           target="_blank"
                           href="https://accessibilityinsights.io/info-examples/web/aria-toggle-field-name"
-                          class="ms-Link insights-link root-49"
+                          class="ms-Link insights-link root-109"
                           aria-label="rule aria-toggle-field-name"
                           aria-describedby="not-applicable-rule-aria-toggle-field-name-description"
                           >aria-toggle-field-name</a
@@ -2710,7 +2690,7 @@
                         ><a
                           target="_blank"
                           href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html"
-                          class="ms-Link insights-link root-49"
+                          class="ms-Link insights-link root-109"
                           id="new-tab-link-with-confirmation-dialog__13"
                           >WCAG 4.1.2</a
                         ><script>
@@ -2743,7 +2723,7 @@
                         ><a
                           target="_blank"
                           href="https://accessibilityinsights.io/info-examples/web/autocomplete-valid"
-                          class="ms-Link insights-link root-49"
+                          class="ms-Link insights-link root-109"
                           aria-label="rule autocomplete-valid"
                           aria-describedby="not-applicable-rule-autocomplete-valid-description"
                           >autocomplete-valid</a
@@ -2758,7 +2738,7 @@
                         ><a
                           target="_blank"
                           href="https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html"
-                          class="ms-Link insights-link root-49"
+                          class="ms-Link insights-link root-109"
                           id="new-tab-link-with-confirmation-dialog__14"
                           >WCAG 1.3.5</a
                         ><script>
@@ -2844,7 +2824,7 @@
         <a
           target="_blank"
           href="http://aka.ms/AccessibilityInsights"
-          class="ms-Link insights-link tool-name-link root-49"
+          class="ms-Link insights-link tool-name-link root-109"
           title="Get more information and download Accessibility Insights for Web"
           >http://aka.ms/AccessibilityInsights</a
         >.</div

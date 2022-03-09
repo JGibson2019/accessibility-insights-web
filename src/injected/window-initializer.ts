@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
-import { getRTL } from '@uifabric/utilities';
+import { getRTL } from '@fluentui/utilities';
 import * as axe from 'axe-core';
 import { BrowserAdapterFactory } from 'common/browser-adapters/browser-adapter-factory';
 import { WebVisualizationConfigurationFactory } from 'common/configs/web-visualization-configuration-factory';
@@ -16,10 +16,8 @@ import { BrowserBackchannelWindowMessagePoster } from 'injected/frameCommunicato
 import { FrameMessenger } from 'injected/frameCommunicators/frame-messenger';
 import { RespondableCommandMessageCommunicator } from 'injected/frameCommunicators/respondable-command-message-communicator';
 import { SingleFrameTabStopListener } from 'injected/single-frame-tab-stop-listener';
-import {
-    DefaultTabStopsRequirementEvaluator,
-    TabStopRequirementResult,
-} from 'injected/tab-stops-requirement-evaluator';
+import { AutomatedTabStopRequirementResult } from 'injected/tab-stop-requirement-result';
+import { DefaultTabStopsRequirementEvaluator } from 'injected/tab-stops-requirement-evaluator';
 import { TabbableElementGetter } from 'injected/tabbable-element-getter';
 import { getUniqueSelector } from 'scanner/axe-utils';
 import { tabbable } from 'tabbable';
@@ -60,7 +58,7 @@ export class WindowInitializer {
     protected drawingController: DrawingController;
     protected scrollingController: ScrollingController;
     protected manualTabStopListener: AllFrameRunner<TabStopEvent>;
-    protected tabStopRequirementRunner: AllFrameRunner<TabStopRequirementResult>;
+    protected tabStopRequirementRunner: AllFrameRunner<AutomatedTabStopRequirementResult>;
     protected frameUrlFinder: FrameUrlFinder;
     protected elementFinderByPosition: ElementFinderByPosition;
     protected elementFinderByPath: ElementFinderByPath;
@@ -151,7 +149,7 @@ export class WindowInitializer {
             tabStopRequirementEvaluator,
             getUniqueSelector,
         );
-        this.tabStopRequirementRunner = new AllFrameRunner<TabStopRequirementResult>(
+        this.tabStopRequirementRunner = new AllFrameRunner<AutomatedTabStopRequirementResult>(
             this.frameMessenger,
             htmlElementUtils,
             this.windowUtils,

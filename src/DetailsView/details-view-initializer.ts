@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+import { loadTheme, setFocusVisibility } from '@fluentui/react';
 import Ajv from 'ajv';
 import { AssessmentDefaultMessageGenerator } from 'assessments/assessment-default-message-generator';
 import { Assessments } from 'assessments/assessments';
@@ -50,7 +51,6 @@ import {
     TabStopsFailedCounterInstancesOnly,
 } from 'DetailsView/tab-stops-failed-counter';
 import { NullStoreActionMessageCreator } from 'electron/adapters/null-store-action-message-creator';
-import { loadTheme, setFocusVisibility } from 'office-ui-fabric-react';
 import * as ReactDOM from 'react-dom';
 import { ReportExportServiceProviderImpl } from 'report-export/report-export-service-provider-impl';
 import { AssessmentJsonExportGenerator } from 'reports/assessment-json-export-generator';
@@ -83,7 +83,7 @@ import { DocumentManipulator } from '../common/document-manipulator';
 import { DropdownClickHandler } from '../common/dropdown-click-handler';
 import { TelemetryEventSource } from '../common/extension-telemetry-events';
 import { initializeFabricIcons } from '../common/fabric-icons';
-import { getAllFeatureFlagDetails } from '../common/feature-flags';
+import { FeatureFlags, getAllFeatureFlagDetails } from '../common/feature-flags';
 import { FileURLProvider } from '../common/file-url-provider';
 import { GetGuidanceTagsFromGuidanceLinks } from '../common/get-guidance-tags-from-guidance-links';
 import { getInnerTextFromJsxElement } from '../common/get-inner-text-from-jsx-element';
@@ -567,7 +567,10 @@ if (tabId != null) {
                 assessmentViewUpdateHandler,
                 navLinkRenderer,
                 getNarrowModeThresholds: getNarrowModeThresholdsForWeb,
-                tabStopRequirements: requirements,
+                tabStopRequirements: requirements(
+                    featureFlagStore.getState() != null &&
+                        featureFlagStore.getState()[FeatureFlags.tabStopsAutomation],
+                ),
                 tabStopsFailedCounter: new TabStopsFailedCounterInstancesOnly(),
                 tabStopsTestViewController,
                 tabStopsInstanceSectionPropsFactory: FastPassTabStopsInstanceSectionPropsFactory,
