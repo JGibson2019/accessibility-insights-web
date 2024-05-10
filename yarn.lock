@@ -3374,7 +3374,7 @@ __metadata:
     tabbable: ^6.2.0
     terser-webpack-plugin: ^5.3.10
     ts-loader: ^9.5.1
-    typed-scss-modules: ^8.0.0
+    typed-scss-modules: ^8.0.1
     typemoq: ^2.1.0
     typescript: ^5.4.5
     ua-parser-js: ^1.0.37
@@ -13089,9 +13089,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typed-scss-modules@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "typed-scss-modules@npm:8.0.0"
+"typed-scss-modules@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "typed-scss-modules@npm:8.0.1"
   dependencies:
     bundle-require: ^3.0.4
     chalk: 4.1.2
@@ -13115,7 +13115,7 @@ __metadata:
       optional: true
   bin:
     typed-scss-modules: dist/lib/cli.js
-  checksum: ee346e49219beb3d6847a50dcb81c698f19e8097ae85c02204c28b6152b4d7c92dc4065becca23d205cce2400f15edd27c48749a7acb0d638fbb1cd68beaa741
+  checksum: 11d7accd48842ec4a9560a3ce7eb1f1ecf2d6402e7c750589724bffc499b2262b84775ec898bcd4577ca9ccfa4a8024f86e425bde7ecc8df75d66b356474b6f5
   languageName: node
   linkType: hard
 
